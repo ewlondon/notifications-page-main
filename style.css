@@ -1,0 +1,128 @@
+@import url(https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:200,300,regular,500,600,700,800,200italic,300italic,italic,500italic,600italic,700italic,800italic);
+:root {
+  --white: #fff;
+  --light-grey: hsl(228, 56%, 98%);
+  --mid-grey: hsl(229, 41%, 90%);
+  --dark-grey: hsl(223, 8%, 65%);
+  --darker-grey: hsl(223, 9%, 37%);
+  --dark-blue: hsl(217, 89%, 25%);
+  --light-blue: hsl(210, 62%, 94%);
+  --alert: hsl(1, 100%, 66%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light-grey);
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+main {
+  margin-block: 4rem;
+  height: max-content;
+  width: min(725px, 90%);
+  padding: 2rem;
+  border-radius: 20px;
+  background-color: var(--white);
+  box-shadow: 0 10px 30px -10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  font-weight: 700;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+header,
+header > h1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header > h1 > span {
+  font-size: 0.9rem;
+  border-radius: 7px;
+  padding: 0.4rem 0.8rem;
+  margin-left: 1.2rem;
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
+header > span {
+  color: var(--dark-blue);
+  font-weight: 500;
+  cursor: pointer;
+}
+.avatar {
+  width: 3rem;
+  height: 3rem;
+}
+
+section {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+article > p > span,
+article > p > strong {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--darker-grey);
+  &:hover {
+    color: var(--dark-blue);
+  }
+}
+article > p:nth-of-type(2) {
+  color: var(--dark-grey);
+}
+article > p {
+  position: relative;
+}
+.unread::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  margin-left: 0.5rem;
+  transform: translateY(100%);
+  width: 7px;
+  height: 7px;
+  background-color: var(--alert);
+}
+
+.message {
+  border-radius: 10px;
+  margin-top: 1rem;
+  border: 1px solid var(--mid-grey);
+  padding: 1rem;
+  &:hover {
+    cursor: pointer;
+    background-color: var(--light-blue);
+  }
+}
+
+.new {
+  background-color: var(--light-grey);
+}
+
+@media (width < 625px){
+  h1{
+    font-size: 1rem;
+  }
+  .notifications{
+    margin-left: 0.3rem;
+    margin-right: 0.4rem;
+  }
+}
