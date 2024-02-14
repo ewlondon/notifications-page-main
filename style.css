@@ -34,7 +34,7 @@ main {
   padding: 2rem;
   border-radius: 20px;
   background-color: var(--white);
-  box-shadow: 0 10px 30px -10px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
@@ -69,6 +69,7 @@ header > span {
 }
 
 section {
+  cursor: pointer;
   width: 100%;
   display: flex;
   gap: 1rem;
@@ -117,11 +118,11 @@ article > p {
   background-color: var(--light-grey);
 }
 
-@media (width < 625px){
-  h1{
+@media (width < 625px) {
+  h1 {
     font-size: 1rem;
   }
-  .notifications{
+  .notifications {
     margin-left: 0.3rem;
     margin-right: 0.4rem;
   }
