@@ -94,6 +94,11 @@ article > p:nth-of-type(2) {
 article > p {
   position: relative;
 }
+article > p > a {
+  font-weight: 700;
+  color: var(--dark-blue);
+  text-decoration: none;
+}
 .unread::after {
   content: "";
   position: absolute;
@@ -115,7 +120,7 @@ article > p {
     background-color: var(--light-blue);
   }
 }
-.picture-comment{
+.picture-comment {
   margin-left: auto;
   width: 3rem;
   height: 3rem;
@@ -133,5 +138,4 @@ article > p {
     margin-left: 0.3rem;
     margin-right: 0.4rem;
   }
- 
 }
